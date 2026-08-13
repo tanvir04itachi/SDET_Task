@@ -1,0 +1,23 @@
+{
+    "name": "dmoney-api-integration-tests",
+    "version": "1.0.0",
+    "description": "API integration test suite for the DMoney Transaction API, built with Mocha, Chai and Axios.",
+    "main": "test/dmoney.spec.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [
+        "mocha",
+        "chai",
+        "axios",
+        "api-testing",
+        "dmoney"
+    ],
+    "license": "ISC",
+    "devDependencies": {
+        "axios": "^1.7.9",
+        "chai": "^4.5.0",
+        "dotenv": "^16.4.7",
+        "mocha": "^10.7.3"
+    }
+}

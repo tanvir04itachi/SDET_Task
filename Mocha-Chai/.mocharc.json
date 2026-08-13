@@ -1,0 +1,9 @@
+{
+    "require": [
+        "dotenv/config"
+    ],
+    "spec": "test/**/*.spec.js",
+    "timeout": 20000,
+    "reporter": "spec",
+    "slow": 2000
+}
