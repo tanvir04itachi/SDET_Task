@@ -1,18 +1,4 @@
-/**
- * DMoney Transaction API — end-to-end integration test suite.
- *
- * Flow covered (executed strictly in this order, state is shared across tests):
- *   1. Self-register 2 Customers, 1 Agent, 1 Merchant (all start as "pending").
- *   2. Admin activates all 4 users.
- *   3. Each user logs in (OTP flow, bypassed via ?env=dev + DEFAULT_OTP) to get a JWT.
- *   4. SYSTEM account deposits 5000 tk to the new Agent.
- *   5. Agent deposits 2000 tk to Customer 1 — asserts the agent's deposit commission.
- *   6. Customer 1 sends 1000 tk to Customer 2 — asserts the P2P service fee.
- *   7. Customer 2 cashes out (withdraws) 500 tk via the Agent — asserts the withdraw service fee.
- *   8. Customer 1 pays 400 tk to the Merchant — asserts the service fee deducted from the customer.
- *
- * Every test asserts the HTTP response status code, in addition to business-logic assertions.
- */
+
 
 const axios = require('axios');
 const { expect } = require('chai');
@@ -25,19 +11,15 @@ const SYSTEM_PASSWORD = process.env.SYSTEM_PASSWORD;
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
-// Never throw on non-2xx — every test asserts `res.status` itself.
 const api = axios.create({ baseURL: BASE_URL, validateStatus: () => true });
 
-// ── Test data helpers ────────────────────────────────────────────────────────
-const runId = Date.now().toString(36); // unique per test run, keeps reruns collision-free
+const runId = Date.now().toString(36); 
 
 function randomDigits(len) {
   let s = '';
   for (let i = 0; i < len; i++) s += Math.floor(Math.random() * 10);
   return s;
 }
-
-// phone_number must be exactly 11 characters (API validation rule)
 function genPhone() {
   return `01${randomDigits(9)}`;
 }
@@ -53,12 +35,10 @@ function authHeaders(token) {
   };
 }
 
-/** Registers a new user via the public self-registration endpoint. */
 async function registerUser({ name, email, password, phone_number, nid, role }) {
   return api.post('/user/register', { name, email, password, phone_number, nid, role });
 }
 
-/** Full login flow: POST /user/login → POST /user/verify-otp?env=dev, returns the JWT. */
 async function loginAndGetToken(identifier, password) {
   const isEmail = identifier.includes('@');
   const loginBody = isEmail ? { email: identifier, password } : { phone_number: identifier, password };
@@ -66,7 +46,6 @@ async function loginAndGetToken(identifier, password) {
   const loginRes = await api.post('/user/login', loginBody);
   expect(loginRes.status, 'login status').to.equal(200);
 
-  // Admin / SYSTEM accounts skip OTP and return the token directly.
   if (loginRes.data.token) {
     return loginRes.data.token;
   }
@@ -79,7 +58,6 @@ async function loginAndGetToken(identifier, password) {
   return otpRes.data.token;
 }
 
-// ── Shared state across the whole suite ─────────────────────────────────────
 const ctx = {
   customer1: { name: 'QA Customer One', nid: randomDigits(10), role: 'Customer' },
   customer2: { name: 'QA Customer Two', nid: randomDigits(10), role: 'Customer' },
