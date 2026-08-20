@@ -1,0 +1,22 @@
+{
+  "name": "blogdb-console-app",
+  "version": "1.0.0",
+  "description": "Console-based Blog Management System using Node.js, JavaScript and MySQL",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "mysql",
+    "nodejs",
+    "console",
+    "blog",
+    "crud"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}
