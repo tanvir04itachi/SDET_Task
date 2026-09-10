@@ -54,3 +54,26 @@ export const update_user_status = async (userId, isActive) => {
 
   return user;
 };
+
+const ALLOWED_ROLES = ["user", "admin"];
+
+export const update_user_role = async (userId, role, requestingAdminId) => {
+  if (!ALLOWED_ROLES.includes(role)) {
+    throw new ServiceError(400, `role must be one of: ${ALLOWED_ROLES.join(", ")}`);
+  }
+
+  // Prevent an admin from accidentally locking themselves out of admin access
+  if (userId === requestingAdminId && role !== "admin") {
+    throw new ServiceError(400, "you cannot change your own role");
+  }
+
+  const user = await User.findByPk(userId, {
+    attributes: { exclude: ["password"] },
+  });
+  if (!user) throw new ServiceError(404, "user not found");
+
+  user.role = role;
+  await user.save();
+
+  return user;
+};

@@ -7,6 +7,7 @@ import {
   update_own_profile,
   update_own_password,
   update_status,
+  update_role,
 } from "../controller/users.controller.js";
 
 const router = express.Router();
@@ -19,5 +20,6 @@ router.patch("/password",      verify_token,           update_own_password);
 router.get("/",                verify_token, is_admin, get_users);
 router.get("/:id",             verify_token, is_admin, get_user_by_id);
 router.patch("/:id/status",    verify_token, is_admin, update_status);
+router.patch("/:id/role",      verify_token, is_admin, update_role);
 
 export default router;

@@ -5,6 +5,7 @@ import {
   update_profile,
   update_password,
   update_user_status,
+  update_user_role,
 } from "../Services/user.service.js";
 
 const send_error = (res, error) => {
@@ -73,6 +74,16 @@ export const update_status = async (req, res) => {
   try {
     const user = await update_user_status(Number(req.params.id), req.body.isActive);
     res.status(200).json({ message: "user status updated", data: user });
+  } catch (error) {
+    send_error(res, error);
+  }
+};
+
+// Admin: change a user's role
+export const update_role = async (req, res) => {
+  try {
+    const user = await update_user_role(Number(req.params.id), req.body.role, req.user.id);
+    res.status(200).json({ message: "user role updated", data: user });
   } catch (error) {
     send_error(res, error);
   }
