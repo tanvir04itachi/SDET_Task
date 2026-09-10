@@ -229,9 +229,26 @@ The `/forgot-password` and `/reset-password/[token]` pages and the profile image
 
 ## 📸 Screenshots
 
-> Add screenshots of the major pages (homepage, blog details, login/register, dashboard, blog list/create/edit, profile, change password, admin users) to a `screenshots/` folder and reference them here, e.g.:
->
-> `![Homepage](./screenshots/homepage.png)`
+**Guest**
+
+![Public homepage with blog feed, search, and category filter](./screenshots/01-homepage.png)
+![Blog details page](./screenshots/02-blog-details.png)
+![Login page](./screenshots/03-login.png)
+
+**Admin**
+
+![Admin dashboard](./screenshots/04-admin-dashboard.png)
+![All Blogs management with edit/delete actions](./screenshots/05-admin-all-blogs.png)
+![Admin user management with role and activate/deactivate controls](./screenshots/06-admin-users.png)
+
+**User dashboard**
+
+![User dashboard with welcome message and recent blogs](./screenshots/07-user-dashboard.png)
+![My Blogs list with edit/delete actions](./screenshots/08-user-my-blogs.png)
+
+**Public feed after publishing a new blog**
+
+![Public homepage showing the newly published blog in the feed](./screenshots/09-homepage-updated.png)
 
 ## 📄 Notes
 
