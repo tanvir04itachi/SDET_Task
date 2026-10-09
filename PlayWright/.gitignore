@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Playwright run artifacts (regenerated on every run)
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Local secrets / settings
+.env
+
+# Personal working notes
+MASTER_PROMPT.md
