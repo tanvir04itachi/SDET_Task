@@ -1,0 +1,22 @@
+{
+  "name": "dmoney-k6-performance",
+  "version": "1.0.0",
+  "description": "k6 performance test for DMoney deposit, send money and payment APIs",
+  "private": true,
+  "scripts": {
+    "api": "cd dmoney-transaction-api && npm start",
+    "prepare-db": "node setup/prepare-db.js",
+    "seed": "node setup/seed.js",
+    "test": "node scripts/run-k6.js",
+    "test:dashboard": "node scripts/run-k6.js --dashboard",
+    "compare": "node scripts/compare.js",
+    "restore-db": "node setup/restore-db.js",
+    "index:add": "node setup/account-index.js",
+    "index:drop": "node setup/account-index.js --drop",
+    "perf": "npm run prepare-db && npm run seed && npm run test:dashboard && npm run compare"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}

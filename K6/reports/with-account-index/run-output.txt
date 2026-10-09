@@ -1,0 +1,1937 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: tests/dmoney-transactions.js
+ web dashboard: http://127.0.0.1:5665
+        output: -
+
+     scenarios: (100.00%) 13 scenarios, 8 max VUs, 2m5s max duration (incl. graceful stop):
+              * p1_c1_send_c2: 1 looping VUs for 30s (exec: c1SendC2_p1, gracefulStop: 5s)
+              * p1_c2_pay_m1: 1 looping VUs for 30s (exec: c2PayM1_p1, gracefulStop: 5s)
+              * p2_a1_dep_c2: 1 looping VUs for 30s (exec: a1DepC2_p2, startTime: 30s, gracefulStop: 5s)
+              * p2_c1_pay_m1: 1 looping VUs for 30s (exec: c1PayM1_p2, startTime: 30s, gracefulStop: 5s)
+              * p2_c2_send_c1: 1 looping VUs for 30s (exec: c2SendC1_p2, startTime: 30s, gracefulStop: 5s)
+              * p3_a1_dep_c1: 1 looping VUs for 30s (exec: a1DepC1_p3, startTime: 1m0s, gracefulStop: 5s)
+              * p3_a2_dep_c2: 1 looping VUs for 30s (exec: a2DepC2_p3, startTime: 1m0s, gracefulStop: 5s)
+              * p3_c1_send_c2: 1 looping VUs for 30s (exec: c1SendC2_p3, startTime: 1m0s, gracefulStop: 5s)
+              * p3_c2_pay_m2: 1 looping VUs for 30s (exec: c2PayM2_p3, startTime: 1m0s, gracefulStop: 5s)
+              * p4_a1_pay_m1: 1 looping VUs for 30s (exec: a1PayM1_p4, startTime: 1m30s, gracefulStop: 5s)
+              * p4_a2_pay_m2: 1 looping VUs for 30s (exec: a2PayM2_p4, startTime: 1m30s, gracefulStop: 5s)
+              * p4_c1_pay_m1: 1 looping VUs for 30s (exec: c1PayM1_p4, startTime: 1m30s, gracefulStop: 5s)
+              * p4_c2_pay_m2: 1 looping VUs for 30s (exec: c2PayM2_p4, startTime: 1m30s, gracefulStop: 5s)
+
+time="2026-10-09T22:48:06+06:00" level=info msg="customer1: balance 3000 tk, estimated max spend 1800 tk" source=console
+time="2026-10-09T22:48:06+06:00" level=info msg="customer2: balance 3000 tk, estimated max spend 1800 tk" source=console
+time="2026-10-09T22:48:06+06:00" level=info msg="agent1: balance 7265 tk, estimated max spend 1350 tk" source=console
+time="2026-10-09T22:48:06+06:00" level=info msg="agent2: balance 9000 tk, estimated max spend 900 tk" source=console
+
+running (0m01.0s), 2/8 VUs, 0 complete and 0 interrupted iterations
+p1_c1_send_c2   [   3% ] 1 VUs    00.9s/30s
+p1_c2_pay_m1    [   3% ] 1 VUs    00.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  29.1s
+p2_c1_pay_m1  • [   0% ] waiting  29.1s
+p2_c2_send_c1 • [   0% ] waiting  29.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m59.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m59.1s
+p3_c1_send_c2 • [   0% ] waiting  0m59.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m59.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m29.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m29.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m29.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m29.1s
+
+running (0m02.0s), 2/8 VUs, 2 complete and 0 interrupted iterations
+p1_c1_send_c2   [   6% ] 1 VUs    01.9s/30s
+p1_c2_pay_m1    [   6% ] 1 VUs    01.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  28.1s
+p2_c1_pay_m1  • [   0% ] waiting  28.1s
+p2_c2_send_c1 • [   0% ] waiting  28.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m58.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m58.1s
+p3_c1_send_c2 • [   0% ] waiting  0m58.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m58.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m28.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m28.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m28.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m28.1s
+
+running (0m03.0s), 2/8 VUs, 4 complete and 0 interrupted iterations
+p1_c1_send_c2   [  10% ] 1 VUs    02.9s/30s
+p1_c2_pay_m1    [  10% ] 1 VUs    02.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  27.1s
+p2_c1_pay_m1  • [   0% ] waiting  27.1s
+p2_c2_send_c1 • [   0% ] waiting  27.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m57.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m57.1s
+p3_c1_send_c2 • [   0% ] waiting  0m57.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m57.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m27.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m27.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m27.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m27.1s
+
+running (0m04.0s), 2/8 VUs, 6 complete and 0 interrupted iterations
+p1_c1_send_c2   [  13% ] 1 VUs    03.9s/30s
+p1_c2_pay_m1    [  13% ] 1 VUs    03.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  26.1s
+p2_c1_pay_m1  • [   0% ] waiting  26.1s
+p2_c2_send_c1 • [   0% ] waiting  26.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m56.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m56.1s
+p3_c1_send_c2 • [   0% ] waiting  0m56.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m56.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m26.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m26.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m26.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m26.1s
+
+running (0m05.0s), 2/8 VUs, 8 complete and 0 interrupted iterations
+p1_c1_send_c2   [  16% ] 1 VUs    04.9s/30s
+p1_c2_pay_m1    [  16% ] 1 VUs    04.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  25.1s
+p2_c1_pay_m1  • [   0% ] waiting  25.1s
+p2_c2_send_c1 • [   0% ] waiting  25.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m55.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m55.1s
+p3_c1_send_c2 • [   0% ] waiting  0m55.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m55.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m25.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m25.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m25.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m25.1s
+
+running (0m06.0s), 2/8 VUs, 10 complete and 0 interrupted iterations
+p1_c1_send_c2   [  20% ] 1 VUs    05.9s/30s
+p1_c2_pay_m1    [  20% ] 1 VUs    05.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  24.1s
+p2_c1_pay_m1  • [   0% ] waiting  24.1s
+p2_c2_send_c1 • [   0% ] waiting  24.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m54.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m54.1s
+p3_c1_send_c2 • [   0% ] waiting  0m54.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m54.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m24.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m24.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m24.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m24.1s
+
+running (0m07.0s), 2/8 VUs, 12 complete and 0 interrupted iterations
+p1_c1_send_c2   [  23% ] 1 VUs    06.9s/30s
+p1_c2_pay_m1    [  23% ] 1 VUs    06.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  23.1s
+p2_c1_pay_m1  • [   0% ] waiting  23.1s
+p2_c2_send_c1 • [   0% ] waiting  23.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m53.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m53.1s
+p3_c1_send_c2 • [   0% ] waiting  0m53.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m53.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m23.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m23.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m23.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m23.1s
+
+running (0m08.0s), 2/8 VUs, 14 complete and 0 interrupted iterations
+p1_c1_send_c2   [  26% ] 1 VUs    07.9s/30s
+p1_c2_pay_m1    [  26% ] 1 VUs    07.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  22.1s
+p2_c1_pay_m1  • [   0% ] waiting  22.1s
+p2_c2_send_c1 • [   0% ] waiting  22.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m52.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m52.1s
+p3_c1_send_c2 • [   0% ] waiting  0m52.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m52.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m22.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m22.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m22.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m22.1s
+
+running (0m09.0s), 2/8 VUs, 16 complete and 0 interrupted iterations
+p1_c1_send_c2   [  30% ] 1 VUs    08.9s/30s
+p1_c2_pay_m1    [  30% ] 1 VUs    08.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  21.1s
+p2_c1_pay_m1  • [   0% ] waiting  21.1s
+p2_c2_send_c1 • [   0% ] waiting  21.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m51.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m51.1s
+p3_c1_send_c2 • [   0% ] waiting  0m51.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m51.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m21.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m21.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m21.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m21.1s
+
+running (0m10.0s), 2/8 VUs, 18 complete and 0 interrupted iterations
+p1_c1_send_c2   [  33% ] 1 VUs    09.9s/30s
+p1_c2_pay_m1    [  33% ] 1 VUs    09.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  20.1s
+p2_c1_pay_m1  • [   0% ] waiting  20.1s
+p2_c2_send_c1 • [   0% ] waiting  20.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m50.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m50.1s
+p3_c1_send_c2 • [   0% ] waiting  0m50.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m50.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m20.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m20.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m20.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m20.1s
+
+running (0m11.0s), 2/8 VUs, 20 complete and 0 interrupted iterations
+p1_c1_send_c2   [  36% ] 1 VUs    10.9s/30s
+p1_c2_pay_m1    [  36% ] 1 VUs    10.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  19.1s
+p2_c1_pay_m1  • [   0% ] waiting  19.1s
+p2_c2_send_c1 • [   0% ] waiting  19.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m49.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m49.1s
+p3_c1_send_c2 • [   0% ] waiting  0m49.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m49.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m19.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m19.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m19.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m19.1s
+
+running (0m12.0s), 2/8 VUs, 22 complete and 0 interrupted iterations
+p1_c1_send_c2   [  40% ] 1 VUs    11.9s/30s
+p1_c2_pay_m1    [  40% ] 1 VUs    11.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  18.1s
+p2_c1_pay_m1  • [   0% ] waiting  18.1s
+p2_c2_send_c1 • [   0% ] waiting  18.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m48.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m48.1s
+p3_c1_send_c2 • [   0% ] waiting  0m48.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m48.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m18.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m18.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m18.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m18.1s
+
+running (0m13.0s), 2/8 VUs, 24 complete and 0 interrupted iterations
+p1_c1_send_c2   [  43% ] 1 VUs    12.9s/30s
+p1_c2_pay_m1    [  43% ] 1 VUs    12.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  17.1s
+p2_c1_pay_m1  • [   0% ] waiting  17.1s
+p2_c2_send_c1 • [   0% ] waiting  17.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m47.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m47.1s
+p3_c1_send_c2 • [   0% ] waiting  0m47.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m47.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m17.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m17.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m17.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m17.1s
+
+running (0m14.0s), 2/8 VUs, 26 complete and 0 interrupted iterations
+p1_c1_send_c2   [  46% ] 1 VUs    13.9s/30s
+p1_c2_pay_m1    [  46% ] 1 VUs    13.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  16.1s
+p2_c1_pay_m1  • [   0% ] waiting  16.1s
+p2_c2_send_c1 • [   0% ] waiting  16.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m46.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m46.1s
+p3_c1_send_c2 • [   0% ] waiting  0m46.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m46.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m16.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m16.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m16.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m16.1s
+
+running (0m15.0s), 2/8 VUs, 28 complete and 0 interrupted iterations
+p1_c1_send_c2   [  50% ] 1 VUs    14.9s/30s
+p1_c2_pay_m1    [  50% ] 1 VUs    14.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  15.1s
+p2_c1_pay_m1  • [   0% ] waiting  15.1s
+p2_c2_send_c1 • [   0% ] waiting  15.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m45.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m45.1s
+p3_c1_send_c2 • [   0% ] waiting  0m45.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m45.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m15.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m15.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m15.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m15.1s
+
+running (0m16.0s), 2/8 VUs, 30 complete and 0 interrupted iterations
+p1_c1_send_c2   [  53% ] 1 VUs    15.9s/30s
+p1_c2_pay_m1    [  53% ] 1 VUs    15.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  14.1s
+p2_c1_pay_m1  • [   0% ] waiting  14.1s
+p2_c2_send_c1 • [   0% ] waiting  14.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m44.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m44.1s
+p3_c1_send_c2 • [   0% ] waiting  0m44.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m44.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m14.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m14.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m14.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m14.1s
+
+running (0m17.0s), 2/8 VUs, 32 complete and 0 interrupted iterations
+p1_c1_send_c2   [  56% ] 1 VUs    16.9s/30s
+p1_c2_pay_m1    [  56% ] 1 VUs    16.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  13.1s
+p2_c1_pay_m1  • [   0% ] waiting  13.1s
+p2_c2_send_c1 • [   0% ] waiting  13.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m43.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m43.1s
+p3_c1_send_c2 • [   0% ] waiting  0m43.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m43.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m13.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m13.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m13.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m13.1s
+
+running (0m18.0s), 2/8 VUs, 34 complete and 0 interrupted iterations
+p1_c1_send_c2   [  60% ] 1 VUs    17.9s/30s
+p1_c2_pay_m1    [  60% ] 1 VUs    17.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  12.1s
+p2_c1_pay_m1  • [   0% ] waiting  12.1s
+p2_c2_send_c1 • [   0% ] waiting  12.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m42.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m42.1s
+p3_c1_send_c2 • [   0% ] waiting  0m42.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m42.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m12.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m12.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m12.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m12.1s
+
+running (0m19.0s), 2/8 VUs, 36 complete and 0 interrupted iterations
+p1_c1_send_c2   [  63% ] 1 VUs    18.9s/30s
+p1_c2_pay_m1    [  63% ] 1 VUs    18.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  11.1s
+p2_c1_pay_m1  • [   0% ] waiting  11.1s
+p2_c2_send_c1 • [   0% ] waiting  11.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m41.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m41.1s
+p3_c1_send_c2 • [   0% ] waiting  0m41.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m41.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m11.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m11.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m11.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m11.1s
+
+running (0m20.0s), 2/8 VUs, 38 complete and 0 interrupted iterations
+p1_c1_send_c2   [  66% ] 1 VUs    19.9s/30s
+p1_c2_pay_m1    [  66% ] 1 VUs    19.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  10.1s
+p2_c1_pay_m1  • [   0% ] waiting  10.1s
+p2_c2_send_c1 • [   0% ] waiting  10.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m40.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m40.1s
+p3_c1_send_c2 • [   0% ] waiting  0m40.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m40.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m10.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m10.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m10.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m10.1s
+
+running (0m21.0s), 2/8 VUs, 40 complete and 0 interrupted iterations
+p1_c1_send_c2   [  70% ] 1 VUs    20.9s/30s
+p1_c2_pay_m1    [  70% ] 1 VUs    20.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  09.1s
+p2_c1_pay_m1  • [   0% ] waiting  09.1s
+p2_c2_send_c1 • [   0% ] waiting  09.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m39.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m39.1s
+p3_c1_send_c2 • [   0% ] waiting  0m39.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m39.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m09.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m09.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m09.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m09.1s
+
+running (0m22.0s), 2/8 VUs, 42 complete and 0 interrupted iterations
+p1_c1_send_c2   [  73% ] 1 VUs    21.9s/30s
+p1_c2_pay_m1    [  73% ] 1 VUs    21.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  08.1s
+p2_c1_pay_m1  • [   0% ] waiting  08.1s
+p2_c2_send_c1 • [   0% ] waiting  08.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m38.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m38.1s
+p3_c1_send_c2 • [   0% ] waiting  0m38.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m38.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m08.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m08.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m08.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m08.1s
+
+running (0m23.0s), 2/8 VUs, 44 complete and 0 interrupted iterations
+p1_c1_send_c2   [  76% ] 1 VUs    22.9s/30s
+p1_c2_pay_m1    [  76% ] 1 VUs    22.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  07.1s
+p2_c1_pay_m1  • [   0% ] waiting  07.1s
+p2_c2_send_c1 • [   0% ] waiting  07.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m37.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m37.1s
+p3_c1_send_c2 • [   0% ] waiting  0m37.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m37.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m07.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m07.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m07.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m07.1s
+
+running (0m24.0s), 2/8 VUs, 46 complete and 0 interrupted iterations
+p1_c1_send_c2   [  80% ] 1 VUs    23.9s/30s
+p1_c2_pay_m1    [  80% ] 1 VUs    23.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  06.1s
+p2_c1_pay_m1  • [   0% ] waiting  06.1s
+p2_c2_send_c1 • [   0% ] waiting  06.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m36.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m36.1s
+p3_c1_send_c2 • [   0% ] waiting  0m36.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m36.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m06.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m06.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m06.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m06.1s
+
+running (0m25.0s), 2/8 VUs, 48 complete and 0 interrupted iterations
+p1_c1_send_c2   [  83% ] 1 VUs    24.9s/30s
+p1_c2_pay_m1    [  83% ] 1 VUs    24.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  05.1s
+p2_c1_pay_m1  • [   0% ] waiting  05.1s
+p2_c2_send_c1 • [   0% ] waiting  05.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m35.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m35.1s
+p3_c1_send_c2 • [   0% ] waiting  0m35.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m35.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m05.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m05.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m05.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m05.1s
+
+running (0m26.0s), 2/8 VUs, 50 complete and 0 interrupted iterations
+p1_c1_send_c2   [  86% ] 1 VUs    25.9s/30s
+p1_c2_pay_m1    [  86% ] 1 VUs    25.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  04.1s
+p2_c1_pay_m1  • [   0% ] waiting  04.1s
+p2_c2_send_c1 • [   0% ] waiting  04.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m34.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m34.1s
+p3_c1_send_c2 • [   0% ] waiting  0m34.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m34.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m04.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m04.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m04.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m04.1s
+
+running (0m27.0s), 2/8 VUs, 52 complete and 0 interrupted iterations
+p1_c1_send_c2   [  90% ] 1 VUs    26.9s/30s
+p1_c2_pay_m1    [  90% ] 1 VUs    26.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  03.1s
+p2_c1_pay_m1  • [   0% ] waiting  03.1s
+p2_c2_send_c1 • [   0% ] waiting  03.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m33.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m33.1s
+p3_c1_send_c2 • [   0% ] waiting  0m33.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m33.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m03.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m03.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m03.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m03.1s
+
+running (0m28.0s), 2/8 VUs, 54 complete and 0 interrupted iterations
+p1_c1_send_c2   [  93% ] 1 VUs    27.9s/30s
+p1_c2_pay_m1    [  93% ] 1 VUs    27.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  02.1s
+p2_c1_pay_m1  • [   0% ] waiting  02.1s
+p2_c2_send_c1 • [   0% ] waiting  02.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m32.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m32.1s
+p3_c1_send_c2 • [   0% ] waiting  0m32.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m32.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m02.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m02.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m02.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m02.1s
+
+running (0m29.0s), 2/8 VUs, 54 complete and 0 interrupted iterations
+p1_c1_send_c2   [  96% ] 1 VUs    28.9s/30s
+p1_c2_pay_m1    [  96% ] 1 VUs    28.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  01.1s
+p2_c1_pay_m1  • [   0% ] waiting  01.1s
+p2_c2_send_c1 • [   0% ] waiting  01.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m31.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m31.1s
+p3_c1_send_c2 • [   0% ] waiting  0m31.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m31.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m01.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m01.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m01.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m01.1s
+
+running (0m30.0s), 2/8 VUs, 56 complete and 0 interrupted iterations
+p1_c1_send_c2   [ 100% ] 1 VUs    29.9s/30s
+p1_c2_pay_m1    [ 100% ] 1 VUs    29.9s/30s
+p2_a1_dep_c2  • [   0% ] waiting  00.1s
+p2_c1_pay_m1  • [   0% ] waiting  00.1s
+p2_c2_send_c1 • [   0% ] waiting  00.1s
+p3_a1_dep_c1  • [   0% ] waiting  0m30.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m30.1s
+p3_c1_send_c2 • [   0% ] waiting  0m30.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m30.1s
+p4_a1_pay_m1  • [   0% ] waiting  1m00.1s
+p4_a2_pay_m2  • [   0% ] waiting  1m00.1s
+p4_c1_pay_m1  • [   0% ] waiting  1m00.1s
+p4_c2_pay_m2  • [   0% ] waiting  1m00.1s
+
+running (0m31.0s), 5/8 VUs, 58 complete and 0 interrupted iterations
+p1_c1_send_c2 ↓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ↓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [   3% ] 1 VUs    00.9s/30s
+p2_c1_pay_m1    [   3% ] 1 VUs    00.9s/30s
+p2_c2_send_c1   [   3% ] 1 VUs    00.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m29.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m29.1s
+p3_c1_send_c2 • [   0% ] waiting  0m29.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m29.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m59.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m59.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m59.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m59.1s
+
+running (0m32.0s), 3/8 VUs, 63 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [   6% ] 1 VUs    01.9s/30s
+p2_c1_pay_m1    [   6% ] 1 VUs    01.9s/30s
+p2_c2_send_c1   [   6% ] 1 VUs    01.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m28.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m28.1s
+p3_c1_send_c2 • [   0% ] waiting  0m28.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m28.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m58.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m58.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m58.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m58.1s
+
+running (0m33.0s), 3/8 VUs, 66 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  10% ] 1 VUs    02.9s/30s
+p2_c1_pay_m1    [  10% ] 1 VUs    02.9s/30s
+p2_c2_send_c1   [  10% ] 1 VUs    02.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m27.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m27.1s
+p3_c1_send_c2 • [   0% ] waiting  0m27.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m27.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m57.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m57.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m57.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m57.1s
+
+running (0m34.0s), 3/8 VUs, 69 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  13% ] 1 VUs    03.9s/30s
+p2_c1_pay_m1    [  13% ] 1 VUs    03.9s/30s
+p2_c2_send_c1   [  13% ] 1 VUs    03.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m26.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m26.1s
+p3_c1_send_c2 • [   0% ] waiting  0m26.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m26.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m56.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m56.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m56.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m56.1s
+
+running (0m35.0s), 3/8 VUs, 72 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  16% ] 1 VUs    04.9s/30s
+p2_c1_pay_m1    [  16% ] 1 VUs    04.9s/30s
+p2_c2_send_c1   [  16% ] 1 VUs    04.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m25.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m25.1s
+p3_c1_send_c2 • [   0% ] waiting  0m25.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m25.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m55.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m55.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m55.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m55.1s
+
+running (0m36.0s), 3/8 VUs, 75 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  20% ] 1 VUs    05.9s/30s
+p2_c1_pay_m1    [  20% ] 1 VUs    05.9s/30s
+p2_c2_send_c1   [  20% ] 1 VUs    05.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m24.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m24.1s
+p3_c1_send_c2 • [   0% ] waiting  0m24.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m24.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m54.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m54.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m54.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m54.1s
+
+running (0m37.0s), 3/8 VUs, 78 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  23% ] 1 VUs    06.9s/30s
+p2_c1_pay_m1    [  23% ] 1 VUs    06.9s/30s
+p2_c2_send_c1   [  23% ] 1 VUs    06.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m23.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m23.1s
+p3_c1_send_c2 • [   0% ] waiting  0m23.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m23.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m53.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m53.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m53.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m53.1s
+
+running (0m38.0s), 3/8 VUs, 81 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  26% ] 1 VUs    07.9s/30s
+p2_c1_pay_m1    [  26% ] 1 VUs    07.9s/30s
+p2_c2_send_c1   [  26% ] 1 VUs    07.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m22.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m22.1s
+p3_c1_send_c2 • [   0% ] waiting  0m22.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m22.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m52.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m52.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m52.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m52.1s
+
+running (0m39.0s), 3/8 VUs, 84 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  30% ] 1 VUs    08.9s/30s
+p2_c1_pay_m1    [  30% ] 1 VUs    08.9s/30s
+p2_c2_send_c1   [  30% ] 1 VUs    08.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m21.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m21.1s
+p3_c1_send_c2 • [   0% ] waiting  0m21.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m21.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m51.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m51.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m51.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m51.1s
+
+running (0m40.0s), 3/8 VUs, 87 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  33% ] 1 VUs    09.9s/30s
+p2_c1_pay_m1    [  33% ] 1 VUs    09.9s/30s
+p2_c2_send_c1   [  33% ] 1 VUs    09.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m20.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m20.1s
+p3_c1_send_c2 • [   0% ] waiting  0m20.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m20.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m50.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m50.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m50.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m50.1s
+
+running (0m41.0s), 3/8 VUs, 90 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  36% ] 1 VUs    10.9s/30s
+p2_c1_pay_m1    [  36% ] 1 VUs    10.9s/30s
+p2_c2_send_c1   [  36% ] 1 VUs    10.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m19.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m19.1s
+p3_c1_send_c2 • [   0% ] waiting  0m19.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m19.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m49.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m49.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m49.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m49.1s
+
+running (0m42.0s), 3/8 VUs, 93 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  40% ] 1 VUs    11.9s/30s
+p2_c1_pay_m1    [  40% ] 1 VUs    11.9s/30s
+p2_c2_send_c1   [  40% ] 1 VUs    11.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m18.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m18.1s
+p3_c1_send_c2 • [   0% ] waiting  0m18.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m18.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m48.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m48.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m48.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m48.1s
+
+running (0m43.0s), 3/8 VUs, 96 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  43% ] 1 VUs    12.9s/30s
+p2_c1_pay_m1    [  43% ] 1 VUs    12.9s/30s
+p2_c2_send_c1   [  43% ] 1 VUs    12.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m17.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m17.1s
+p3_c1_send_c2 • [   0% ] waiting  0m17.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m17.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m47.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m47.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m47.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m47.1s
+
+running (0m44.0s), 3/8 VUs, 99 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  46% ] 1 VUs    13.9s/30s
+p2_c1_pay_m1    [  46% ] 1 VUs    13.9s/30s
+p2_c2_send_c1   [  46% ] 1 VUs    13.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m16.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m16.1s
+p3_c1_send_c2 • [   0% ] waiting  0m16.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m16.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m46.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m46.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m46.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m46.1s
+
+running (0m45.0s), 3/8 VUs, 102 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  50% ] 1 VUs    14.9s/30s
+p2_c1_pay_m1    [  50% ] 1 VUs    14.9s/30s
+p2_c2_send_c1   [  50% ] 1 VUs    14.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m15.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m15.1s
+p3_c1_send_c2 • [   0% ] waiting  0m15.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m15.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m45.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m45.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m45.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m45.1s
+
+running (0m46.0s), 3/8 VUs, 105 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  53% ] 1 VUs    15.9s/30s
+p2_c1_pay_m1    [  53% ] 1 VUs    15.9s/30s
+p2_c2_send_c1   [  53% ] 1 VUs    15.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m14.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m14.1s
+p3_c1_send_c2 • [   0% ] waiting  0m14.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m14.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m44.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m44.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m44.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m44.1s
+
+running (0m47.0s), 3/8 VUs, 108 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  56% ] 1 VUs    16.9s/30s
+p2_c1_pay_m1    [  56% ] 1 VUs    16.9s/30s
+p2_c2_send_c1   [  56% ] 1 VUs    16.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m13.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m13.1s
+p3_c1_send_c2 • [   0% ] waiting  0m13.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m13.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m43.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m43.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m43.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m43.1s
+
+running (0m48.0s), 3/8 VUs, 111 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  60% ] 1 VUs    17.9s/30s
+p2_c1_pay_m1    [  60% ] 1 VUs    17.9s/30s
+p2_c2_send_c1   [  60% ] 1 VUs    17.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m12.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m12.1s
+p3_c1_send_c2 • [   0% ] waiting  0m12.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m12.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m42.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m42.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m42.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m42.1s
+
+running (0m49.0s), 3/8 VUs, 114 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  63% ] 1 VUs    18.9s/30s
+p2_c1_pay_m1    [  63% ] 1 VUs    18.9s/30s
+p2_c2_send_c1   [  63% ] 1 VUs    18.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m11.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m11.1s
+p3_c1_send_c2 • [   0% ] waiting  0m11.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m11.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m41.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m41.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m41.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m41.1s
+
+running (0m50.0s), 3/8 VUs, 117 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  66% ] 1 VUs    19.9s/30s
+p2_c1_pay_m1    [  66% ] 1 VUs    19.9s/30s
+p2_c2_send_c1   [  66% ] 1 VUs    19.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m10.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m10.1s
+p3_c1_send_c2 • [   0% ] waiting  0m10.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m10.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m40.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m40.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m40.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m40.1s
+
+running (0m51.0s), 3/8 VUs, 120 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  70% ] 1 VUs    20.9s/30s
+p2_c1_pay_m1    [  70% ] 1 VUs    20.9s/30s
+p2_c2_send_c1   [  70% ] 1 VUs    20.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m09.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m09.1s
+p3_c1_send_c2 • [   0% ] waiting  0m09.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m09.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m39.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m39.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m39.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m39.1s
+
+running (0m52.0s), 3/8 VUs, 123 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  73% ] 1 VUs    21.9s/30s
+p2_c1_pay_m1    [  73% ] 1 VUs    21.9s/30s
+p2_c2_send_c1   [  73% ] 1 VUs    21.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m08.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m08.1s
+p3_c1_send_c2 • [   0% ] waiting  0m08.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m08.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m38.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m38.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m38.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m38.1s
+
+running (0m53.0s), 3/8 VUs, 126 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  76% ] 1 VUs    22.9s/30s
+p2_c1_pay_m1    [  76% ] 1 VUs    22.9s/30s
+p2_c2_send_c1   [  76% ] 1 VUs    22.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m07.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m07.1s
+p3_c1_send_c2 • [   0% ] waiting  0m07.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m07.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m37.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m37.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m37.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m37.1s
+
+running (0m54.0s), 3/8 VUs, 129 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  80% ] 1 VUs    23.9s/30s
+p2_c1_pay_m1    [  80% ] 1 VUs    23.9s/30s
+p2_c2_send_c1   [  80% ] 1 VUs    23.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m06.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m06.1s
+p3_c1_send_c2 • [   0% ] waiting  0m06.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m06.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m36.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m36.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m36.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m36.1s
+
+running (0m55.0s), 3/8 VUs, 132 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  83% ] 1 VUs    24.9s/30s
+p2_c1_pay_m1    [  83% ] 1 VUs    24.9s/30s
+p2_c2_send_c1   [  83% ] 1 VUs    24.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m05.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m05.1s
+p3_c1_send_c2 • [   0% ] waiting  0m05.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m05.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m35.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m35.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m35.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m35.1s
+
+running (0m56.0s), 3/8 VUs, 135 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  86% ] 1 VUs    25.9s/30s
+p2_c1_pay_m1    [  86% ] 1 VUs    25.9s/30s
+p2_c2_send_c1   [  86% ] 1 VUs    25.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m04.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m04.1s
+p3_c1_send_c2 • [   0% ] waiting  0m04.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m04.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m34.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m34.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m34.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m34.1s
+
+running (0m57.0s), 3/8 VUs, 138 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  90% ] 1 VUs    26.9s/30s
+p2_c1_pay_m1    [  90% ] 1 VUs    26.9s/30s
+p2_c2_send_c1   [  90% ] 1 VUs    26.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m03.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m03.1s
+p3_c1_send_c2 • [   0% ] waiting  0m03.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m03.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m33.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m33.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m33.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m33.1s
+
+running (0m58.0s), 3/8 VUs, 141 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  93% ] 1 VUs    27.9s/30s
+p2_c1_pay_m1    [  93% ] 1 VUs    27.9s/30s
+p2_c2_send_c1   [  93% ] 1 VUs    27.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m02.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m02.1s
+p3_c1_send_c2 • [   0% ] waiting  0m02.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m02.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m32.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m32.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m32.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m32.1s
+
+running (0m59.0s), 3/8 VUs, 144 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [  96% ] 1 VUs    28.9s/30s
+p2_c1_pay_m1    [  96% ] 1 VUs    28.9s/30s
+p2_c2_send_c1   [  96% ] 1 VUs    28.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m01.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m01.1s
+p3_c1_send_c2 • [   0% ] waiting  0m01.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m01.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m31.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m31.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m31.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m31.1s
+
+running (1m00.0s), 3/8 VUs, 147 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2    [ 100% ] 1 VUs    29.9s/30s
+p2_c1_pay_m1    [ 100% ] 1 VUs    29.9s/30s
+p2_c2_send_c1   [ 100% ] 1 VUs    29.9s/30s
+p3_a1_dep_c1  • [   0% ] waiting  0m00.1s
+p3_a2_dep_c2  • [   0% ] waiting  0m00.1s
+p3_c1_send_c2 • [   0% ] waiting  0m00.1s
+p3_c2_pay_m2  • [   0% ] waiting  0m00.1s
+p4_a1_pay_m1  • [   0% ] waiting  0m30.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m30.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m30.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m30.1s
+
+running (1m01.0s), 4/8 VUs, 150 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [   3% ] 1 VUs    00.9s/30s
+p3_a2_dep_c2    [   3% ] 1 VUs    00.9s/30s
+p3_c1_send_c2   [   3% ] 1 VUs    00.9s/30s
+p3_c2_pay_m2    [   3% ] 1 VUs    00.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m29.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m29.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m29.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m29.1s
+
+running (1m02.0s), 4/8 VUs, 154 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [   6% ] 1 VUs    01.9s/30s
+p3_a2_dep_c2    [   6% ] 1 VUs    01.9s/30s
+p3_c1_send_c2   [   6% ] 1 VUs    01.9s/30s
+p3_c2_pay_m2    [   6% ] 1 VUs    01.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m28.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m28.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m28.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m28.1s
+
+running (1m03.0s), 4/8 VUs, 158 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  10% ] 1 VUs    02.9s/30s
+p3_a2_dep_c2    [  10% ] 1 VUs    02.9s/30s
+p3_c1_send_c2   [  10% ] 1 VUs    02.9s/30s
+p3_c2_pay_m2    [  10% ] 1 VUs    02.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m27.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m27.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m27.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m27.1s
+
+running (1m04.0s), 4/8 VUs, 162 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  13% ] 1 VUs    03.9s/30s
+p3_a2_dep_c2    [  13% ] 1 VUs    03.9s/30s
+p3_c1_send_c2   [  13% ] 1 VUs    03.9s/30s
+p3_c2_pay_m2    [  13% ] 1 VUs    03.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m26.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m26.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m26.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m26.1s
+
+running (1m05.0s), 4/8 VUs, 166 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  16% ] 1 VUs    04.9s/30s
+p3_a2_dep_c2    [  16% ] 1 VUs    04.9s/30s
+p3_c1_send_c2   [  16% ] 1 VUs    04.9s/30s
+p3_c2_pay_m2    [  16% ] 1 VUs    04.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m25.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m25.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m25.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m25.1s
+
+running (1m06.0s), 4/8 VUs, 170 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  20% ] 1 VUs    05.9s/30s
+p3_a2_dep_c2    [  20% ] 1 VUs    05.9s/30s
+p3_c1_send_c2   [  20% ] 1 VUs    05.9s/30s
+p3_c2_pay_m2    [  20% ] 1 VUs    05.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m24.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m24.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m24.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m24.1s
+
+running (1m07.0s), 4/8 VUs, 174 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  23% ] 1 VUs    06.9s/30s
+p3_a2_dep_c2    [  23% ] 1 VUs    06.9s/30s
+p3_c1_send_c2   [  23% ] 1 VUs    06.9s/30s
+p3_c2_pay_m2    [  23% ] 1 VUs    06.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m23.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m23.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m23.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m23.1s
+
+running (1m08.0s), 4/8 VUs, 178 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  26% ] 1 VUs    07.9s/30s
+p3_a2_dep_c2    [  26% ] 1 VUs    07.9s/30s
+p3_c1_send_c2   [  26% ] 1 VUs    07.9s/30s
+p3_c2_pay_m2    [  26% ] 1 VUs    07.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m22.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m22.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m22.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m22.1s
+
+running (1m09.0s), 4/8 VUs, 182 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  30% ] 1 VUs    08.9s/30s
+p3_a2_dep_c2    [  30% ] 1 VUs    08.9s/30s
+p3_c1_send_c2   [  30% ] 1 VUs    08.9s/30s
+p3_c2_pay_m2    [  30% ] 1 VUs    08.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m21.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m21.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m21.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m21.1s
+
+running (1m10.0s), 4/8 VUs, 186 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  33% ] 1 VUs    09.9s/30s
+p3_a2_dep_c2    [  33% ] 1 VUs    09.9s/30s
+p3_c1_send_c2   [  33% ] 1 VUs    09.9s/30s
+p3_c2_pay_m2    [  33% ] 1 VUs    09.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m20.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m20.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m20.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m20.1s
+
+running (1m11.0s), 4/8 VUs, 190 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  36% ] 1 VUs    10.9s/30s
+p3_a2_dep_c2    [  36% ] 1 VUs    10.9s/30s
+p3_c1_send_c2   [  36% ] 1 VUs    10.9s/30s
+p3_c2_pay_m2    [  36% ] 1 VUs    10.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m19.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m19.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m19.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m19.1s
+
+running (1m12.0s), 4/8 VUs, 194 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  40% ] 1 VUs    11.9s/30s
+p3_a2_dep_c2    [  40% ] 1 VUs    11.9s/30s
+p3_c1_send_c2   [  40% ] 1 VUs    11.9s/30s
+p3_c2_pay_m2    [  40% ] 1 VUs    11.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m18.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m18.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m18.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m18.1s
+
+running (1m13.0s), 4/8 VUs, 198 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  43% ] 1 VUs    12.9s/30s
+p3_a2_dep_c2    [  43% ] 1 VUs    12.9s/30s
+p3_c1_send_c2   [  43% ] 1 VUs    12.9s/30s
+p3_c2_pay_m2    [  43% ] 1 VUs    12.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m17.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m17.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m17.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m17.1s
+
+running (1m14.0s), 4/8 VUs, 202 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  46% ] 1 VUs    13.9s/30s
+p3_a2_dep_c2    [  46% ] 1 VUs    13.9s/30s
+p3_c1_send_c2   [  46% ] 1 VUs    13.9s/30s
+p3_c2_pay_m2    [  46% ] 1 VUs    13.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m16.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m16.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m16.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m16.1s
+
+running (1m15.0s), 4/8 VUs, 206 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  50% ] 1 VUs    14.9s/30s
+p3_a2_dep_c2    [  50% ] 1 VUs    14.9s/30s
+p3_c1_send_c2   [  50% ] 1 VUs    14.9s/30s
+p3_c2_pay_m2    [  50% ] 1 VUs    14.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m15.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m15.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m15.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m15.1s
+
+running (1m16.0s), 4/8 VUs, 210 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  53% ] 1 VUs    15.9s/30s
+p3_a2_dep_c2    [  53% ] 1 VUs    15.9s/30s
+p3_c1_send_c2   [  53% ] 1 VUs    15.9s/30s
+p3_c2_pay_m2    [  53% ] 1 VUs    15.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m14.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m14.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m14.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m14.1s
+
+running (1m17.0s), 4/8 VUs, 214 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  56% ] 1 VUs    16.9s/30s
+p3_a2_dep_c2    [  56% ] 1 VUs    16.9s/30s
+p3_c1_send_c2   [  56% ] 1 VUs    16.9s/30s
+p3_c2_pay_m2    [  56% ] 1 VUs    16.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m13.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m13.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m13.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m13.1s
+
+running (1m18.0s), 4/8 VUs, 218 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  60% ] 1 VUs    17.9s/30s
+p3_a2_dep_c2    [  60% ] 1 VUs    17.9s/30s
+p3_c1_send_c2   [  60% ] 1 VUs    17.9s/30s
+p3_c2_pay_m2    [  60% ] 1 VUs    17.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m12.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m12.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m12.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m12.1s
+
+running (1m19.0s), 4/8 VUs, 222 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  63% ] 1 VUs    18.9s/30s
+p3_a2_dep_c2    [  63% ] 1 VUs    18.9s/30s
+p3_c1_send_c2   [  63% ] 1 VUs    18.9s/30s
+p3_c2_pay_m2    [  63% ] 1 VUs    18.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m11.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m11.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m11.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m11.1s
+
+running (1m20.0s), 4/8 VUs, 226 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  66% ] 1 VUs    19.9s/30s
+p3_a2_dep_c2    [  66% ] 1 VUs    19.9s/30s
+p3_c1_send_c2   [  66% ] 1 VUs    19.9s/30s
+p3_c2_pay_m2    [  66% ] 1 VUs    19.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m10.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m10.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m10.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m10.1s
+
+running (1m21.0s), 4/8 VUs, 230 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  70% ] 1 VUs    20.9s/30s
+p3_a2_dep_c2    [  70% ] 1 VUs    20.9s/30s
+p3_c1_send_c2   [  70% ] 1 VUs    20.9s/30s
+p3_c2_pay_m2    [  70% ] 1 VUs    20.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m09.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m09.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m09.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m09.1s
+
+running (1m22.0s), 4/8 VUs, 234 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  73% ] 1 VUs    21.9s/30s
+p3_a2_dep_c2    [  73% ] 1 VUs    21.9s/30s
+p3_c1_send_c2   [  73% ] 1 VUs    21.9s/30s
+p3_c2_pay_m2    [  73% ] 1 VUs    21.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m08.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m08.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m08.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m08.1s
+
+running (1m23.0s), 4/8 VUs, 238 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  76% ] 1 VUs    22.9s/30s
+p3_a2_dep_c2    [  76% ] 1 VUs    22.9s/30s
+p3_c1_send_c2   [  76% ] 1 VUs    22.9s/30s
+p3_c2_pay_m2    [  76% ] 1 VUs    22.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m07.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m07.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m07.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m07.1s
+
+running (1m24.0s), 4/8 VUs, 242 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  80% ] 1 VUs    23.9s/30s
+p3_a2_dep_c2    [  80% ] 1 VUs    23.9s/30s
+p3_c1_send_c2   [  80% ] 1 VUs    23.9s/30s
+p3_c2_pay_m2    [  80% ] 1 VUs    23.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m06.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m06.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m06.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m06.1s
+
+running (1m25.0s), 4/8 VUs, 246 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  83% ] 1 VUs    24.9s/30s
+p3_a2_dep_c2    [  83% ] 1 VUs    24.9s/30s
+p3_c1_send_c2   [  83% ] 1 VUs    24.9s/30s
+p3_c2_pay_m2    [  83% ] 1 VUs    24.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m05.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m05.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m05.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m05.1s
+
+running (1m26.0s), 4/8 VUs, 250 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  86% ] 1 VUs    25.9s/30s
+p3_a2_dep_c2    [  86% ] 1 VUs    25.9s/30s
+p3_c1_send_c2   [  86% ] 1 VUs    25.9s/30s
+p3_c2_pay_m2    [  86% ] 1 VUs    25.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m04.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m04.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m04.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m04.1s
+
+running (1m27.0s), 4/8 VUs, 254 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  90% ] 1 VUs    26.9s/30s
+p3_a2_dep_c2    [  90% ] 1 VUs    26.9s/30s
+p3_c1_send_c2   [  90% ] 1 VUs    26.9s/30s
+p3_c2_pay_m2    [  90% ] 1 VUs    26.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m03.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m03.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m03.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m03.1s
+
+running (1m28.0s), 4/8 VUs, 258 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  93% ] 1 VUs    27.9s/30s
+p3_a2_dep_c2    [  93% ] 1 VUs    27.9s/30s
+p3_c1_send_c2   [  93% ] 1 VUs    27.9s/30s
+p3_c2_pay_m2    [  93% ] 1 VUs    27.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m02.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m02.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m02.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m02.1s
+
+running (1m29.0s), 4/8 VUs, 262 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [  96% ] 1 VUs    28.9s/30s
+p3_a2_dep_c2    [  96% ] 1 VUs    28.9s/30s
+p3_c1_send_c2   [  96% ] 1 VUs    28.9s/30s
+p3_c2_pay_m2    [  96% ] 1 VUs    28.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m01.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m01.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m01.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m01.1s
+
+running (1m30.0s), 4/8 VUs, 266 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs    30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs    30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs    30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs    30s
+p3_a1_dep_c1    [ 100% ] 1 VUs    29.9s/30s
+p3_a2_dep_c2    [ 100% ] 1 VUs    29.9s/30s
+p3_c1_send_c2   [ 100% ] 1 VUs    29.9s/30s
+p3_c2_pay_m2    [ 100% ] 1 VUs    29.9s/30s
+p4_a1_pay_m1  • [   0% ] waiting  0m00.1s
+p4_a2_pay_m2  • [   0% ] waiting  0m00.1s
+p4_c1_pay_m1  • [   0% ] waiting  0m00.1s
+p4_c2_pay_m2  • [   0% ] waiting  0m00.1s
+
+running (1m31.0s), 4/8 VUs, 270 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [   3% ] 1 VUs  00.9s/30s
+p4_a2_pay_m2    [   3% ] 1 VUs  00.9s/30s
+p4_c1_pay_m1    [   3% ] 1 VUs  00.9s/30s
+p4_c2_pay_m2    [   3% ] 1 VUs  00.9s/30s
+
+running (1m32.0s), 4/8 VUs, 274 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [   6% ] 1 VUs  01.9s/30s
+p4_a2_pay_m2    [   6% ] 1 VUs  01.9s/30s
+p4_c1_pay_m1    [   6% ] 1 VUs  01.9s/30s
+p4_c2_pay_m2    [   6% ] 1 VUs  01.9s/30s
+
+running (1m33.0s), 4/8 VUs, 278 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  10% ] 1 VUs  02.9s/30s
+p4_a2_pay_m2    [  10% ] 1 VUs  02.9s/30s
+p4_c1_pay_m1    [  10% ] 1 VUs  02.9s/30s
+p4_c2_pay_m2    [  10% ] 1 VUs  02.9s/30s
+
+running (1m34.0s), 4/8 VUs, 282 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  13% ] 1 VUs  03.9s/30s
+p4_a2_pay_m2    [  13% ] 1 VUs  03.9s/30s
+p4_c1_pay_m1    [  13% ] 1 VUs  03.9s/30s
+p4_c2_pay_m2    [  13% ] 1 VUs  03.9s/30s
+
+running (1m35.0s), 4/8 VUs, 286 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  16% ] 1 VUs  04.9s/30s
+p4_a2_pay_m2    [  16% ] 1 VUs  04.9s/30s
+p4_c1_pay_m1    [  16% ] 1 VUs  04.9s/30s
+p4_c2_pay_m2    [  16% ] 1 VUs  04.9s/30s
+
+running (1m36.0s), 4/8 VUs, 290 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  20% ] 1 VUs  05.9s/30s
+p4_a2_pay_m2    [  20% ] 1 VUs  05.9s/30s
+p4_c1_pay_m1    [  20% ] 1 VUs  05.9s/30s
+p4_c2_pay_m2    [  20% ] 1 VUs  05.9s/30s
+
+running (1m37.0s), 4/8 VUs, 294 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  23% ] 1 VUs  06.9s/30s
+p4_a2_pay_m2    [  23% ] 1 VUs  06.9s/30s
+p4_c1_pay_m1    [  23% ] 1 VUs  06.9s/30s
+p4_c2_pay_m2    [  23% ] 1 VUs  06.9s/30s
+
+running (1m38.0s), 4/8 VUs, 298 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  26% ] 1 VUs  07.9s/30s
+p4_a2_pay_m2    [  26% ] 1 VUs  07.9s/30s
+p4_c1_pay_m1    [  26% ] 1 VUs  07.9s/30s
+p4_c2_pay_m2    [  26% ] 1 VUs  07.9s/30s
+
+running (1m39.0s), 4/8 VUs, 302 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  30% ] 1 VUs  08.9s/30s
+p4_a2_pay_m2    [  30% ] 1 VUs  08.9s/30s
+p4_c1_pay_m1    [  30% ] 1 VUs  08.9s/30s
+p4_c2_pay_m2    [  30% ] 1 VUs  08.9s/30s
+
+running (1m40.0s), 4/8 VUs, 306 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  33% ] 1 VUs  09.9s/30s
+p4_a2_pay_m2    [  33% ] 1 VUs  09.9s/30s
+p4_c1_pay_m1    [  33% ] 1 VUs  09.9s/30s
+p4_c2_pay_m2    [  33% ] 1 VUs  09.9s/30s
+
+running (1m41.0s), 4/8 VUs, 310 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  36% ] 1 VUs  10.9s/30s
+p4_a2_pay_m2    [  36% ] 1 VUs  10.9s/30s
+p4_c1_pay_m1    [  36% ] 1 VUs  10.9s/30s
+p4_c2_pay_m2    [  36% ] 1 VUs  10.9s/30s
+
+running (1m42.0s), 4/8 VUs, 314 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  40% ] 1 VUs  11.9s/30s
+p4_a2_pay_m2    [  40% ] 1 VUs  11.9s/30s
+p4_c1_pay_m1    [  40% ] 1 VUs  11.9s/30s
+p4_c2_pay_m2    [  40% ] 1 VUs  11.9s/30s
+
+running (1m43.0s), 4/8 VUs, 318 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  43% ] 1 VUs  12.9s/30s
+p4_a2_pay_m2    [  43% ] 1 VUs  12.9s/30s
+p4_c1_pay_m1    [  43% ] 1 VUs  12.9s/30s
+p4_c2_pay_m2    [  43% ] 1 VUs  12.9s/30s
+
+running (1m44.0s), 4/8 VUs, 322 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  46% ] 1 VUs  13.9s/30s
+p4_a2_pay_m2    [  46% ] 1 VUs  13.9s/30s
+p4_c1_pay_m1    [  46% ] 1 VUs  13.9s/30s
+p4_c2_pay_m2    [  46% ] 1 VUs  13.9s/30s
+
+running (1m45.0s), 4/8 VUs, 326 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  50% ] 1 VUs  14.9s/30s
+p4_a2_pay_m2    [  50% ] 1 VUs  14.9s/30s
+p4_c1_pay_m1    [  50% ] 1 VUs  14.9s/30s
+p4_c2_pay_m2    [  50% ] 1 VUs  14.9s/30s
+
+running (1m46.0s), 4/8 VUs, 330 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  53% ] 1 VUs  15.9s/30s
+p4_a2_pay_m2    [  53% ] 1 VUs  15.9s/30s
+p4_c1_pay_m1    [  53% ] 1 VUs  15.9s/30s
+p4_c2_pay_m2    [  53% ] 1 VUs  15.9s/30s
+
+running (1m47.0s), 4/8 VUs, 334 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  56% ] 1 VUs  16.9s/30s
+p4_a2_pay_m2    [  56% ] 1 VUs  16.9s/30s
+p4_c1_pay_m1    [  56% ] 1 VUs  16.9s/30s
+p4_c2_pay_m2    [  56% ] 1 VUs  16.9s/30s
+
+running (1m48.0s), 4/8 VUs, 338 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  60% ] 1 VUs  17.9s/30s
+p4_a2_pay_m2    [  60% ] 1 VUs  17.9s/30s
+p4_c1_pay_m1    [  60% ] 1 VUs  17.9s/30s
+p4_c2_pay_m2    [  60% ] 1 VUs  17.9s/30s
+
+running (1m49.0s), 4/8 VUs, 342 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  63% ] 1 VUs  18.9s/30s
+p4_a2_pay_m2    [  63% ] 1 VUs  18.9s/30s
+p4_c1_pay_m1    [  63% ] 1 VUs  18.9s/30s
+p4_c2_pay_m2    [  63% ] 1 VUs  18.9s/30s
+
+running (1m50.0s), 4/8 VUs, 346 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  66% ] 1 VUs  19.9s/30s
+p4_a2_pay_m2    [  66% ] 1 VUs  19.9s/30s
+p4_c1_pay_m1    [  66% ] 1 VUs  19.9s/30s
+p4_c2_pay_m2    [  66% ] 1 VUs  19.9s/30s
+
+running (1m51.0s), 4/8 VUs, 350 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  70% ] 1 VUs  20.9s/30s
+p4_a2_pay_m2    [  70% ] 1 VUs  20.9s/30s
+p4_c1_pay_m1    [  70% ] 1 VUs  20.9s/30s
+p4_c2_pay_m2    [  70% ] 1 VUs  20.9s/30s
+
+running (1m52.0s), 4/8 VUs, 354 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  73% ] 1 VUs  21.9s/30s
+p4_a2_pay_m2    [  73% ] 1 VUs  21.9s/30s
+p4_c1_pay_m1    [  73% ] 1 VUs  21.9s/30s
+p4_c2_pay_m2    [  73% ] 1 VUs  21.9s/30s
+
+running (1m53.0s), 4/8 VUs, 358 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  76% ] 1 VUs  22.9s/30s
+p4_a2_pay_m2    [  76% ] 1 VUs  22.9s/30s
+p4_c1_pay_m1    [  76% ] 1 VUs  22.9s/30s
+p4_c2_pay_m2    [  76% ] 1 VUs  22.9s/30s
+
+running (1m54.0s), 4/8 VUs, 362 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  80% ] 1 VUs  23.9s/30s
+p4_a2_pay_m2    [  80% ] 1 VUs  23.9s/30s
+p4_c1_pay_m1    [  80% ] 1 VUs  23.9s/30s
+p4_c2_pay_m2    [  80% ] 1 VUs  23.9s/30s
+
+running (1m55.0s), 4/8 VUs, 366 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  83% ] 1 VUs  24.9s/30s
+p4_a2_pay_m2    [  83% ] 1 VUs  24.9s/30s
+p4_c1_pay_m1    [  83% ] 1 VUs  24.9s/30s
+p4_c2_pay_m2    [  83% ] 1 VUs  24.9s/30s
+
+running (1m56.0s), 4/8 VUs, 368 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  86% ] 1 VUs  25.9s/30s
+p4_a2_pay_m2    [  86% ] 1 VUs  25.9s/30s
+p4_c1_pay_m1    [  86% ] 1 VUs  25.9s/30s
+p4_c2_pay_m2    [  86% ] 1 VUs  25.9s/30s
+
+running (1m57.0s), 4/8 VUs, 370 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  90% ] 1 VUs  26.9s/30s
+p4_a2_pay_m2    [  90% ] 1 VUs  26.9s/30s
+p4_c1_pay_m1    [  90% ] 1 VUs  26.9s/30s
+p4_c2_pay_m2    [  90% ] 1 VUs  26.9s/30s
+
+running (1m58.0s), 4/8 VUs, 374 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  93% ] 1 VUs  27.9s/30s
+p4_a2_pay_m2    [  93% ] 1 VUs  27.9s/30s
+p4_c1_pay_m1    [  93% ] 1 VUs  27.9s/30s
+p4_c2_pay_m2    [  93% ] 1 VUs  27.9s/30s
+
+running (1m59.0s), 4/8 VUs, 378 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [  96% ] 1 VUs  28.9s/30s
+p4_a2_pay_m2    [  96% ] 1 VUs  28.9s/30s
+p4_c1_pay_m1    [  96% ] 1 VUs  28.9s/30s
+p4_c2_pay_m2    [  96% ] 1 VUs  28.9s/30s
+
+running (2m00.0s), 4/8 VUs, 382 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1    [ 100% ] 1 VUs  29.9s/30s
+p4_a2_pay_m2    [ 100% ] 1 VUs  29.9s/30s
+p4_c1_pay_m1    [ 100% ] 1 VUs  29.9s/30s
+p4_c2_pay_m2    [ 100% ] 1 VUs  29.9s/30s
+time="2026-10-09T22:50:06+06:00" level=info msg="[k6-reporter v2.3.0] Generating HTML summary report" source=console
+[32m     ✓ sendmoney: status is 201[0m
+[32m     ✓ sendmoney: transaction successful[0m
+[32m     ✓ sendmoney: trnxId returned[0m
+[32m     ✓ sendmoney: message is "Send money successful"[0m
+[32m     ✓ payment: status is 201[0m
+[32m     ✓ payment: transaction successful[0m
+[32m     ✓ payment: trnxId returned[0m
+[32m     ✓ payment: message is "Payment successful"[0m
+[32m     ✓ deposit: status is 201[0m
+[32m     ✓ deposit: transaction successful[0m
+[32m     ✓ deposit: trnxId returned[0m
+[32m     ✓ deposit: message is "Deposit successful"[0m
+
+     checks[2m............................:[0m [36m100.00%[0m [36;2m✓ 1544[0m     [36;2m✗ 0[0m  
+     [32m✓[0m { api:deposit }[2m.................:[0m [36m100.00%[0m [36;2m✓ 360[0m      [36;2m✗ 0[0m  
+     [32m✓[0m { api:payment }[2m.................:[0m [36m100.00%[0m [36;2m✓ 824[0m      [36;2m✗ 0[0m  
+     [32m✓[0m { api:sendmoney }[2m...............:[0m [36m100.00%[0m [36;2m✓ 360[0m      [36;2m✗ 0[0m  
+     [32m✓[0m { type:transaction }[2m............:[0m [36m100.00%[0m [36;2m✓ 1544[0m     [36;2m✗ 0[0m  
+     data_received[2m.....................:[0m [36m147 kB[0m  [36;2m1.2 kB/s[0m
+     data_sent[2m.........................:[0m [36m179 kB[0m  [36;2m1.5 kB/s[0m
+     deposit_count[2m.....................:[0m [36m90[0m      [36;2m0.749068/s[0m
+   [32m✓[0m deposit_duration[2m..................:[0m avg=[36m21.37ms[0m min=[36m8.08ms[0m  med=[36m17.14ms[0m  max=[36m45.91ms[0m p(90)=[36m34.15ms[0m p(95)=[36m39.33ms[0m p(99)=[36m43.35ms[0m
+   [32m✓[0m deposit_success[2m...................:[0m [36m100.00%[0m [36;2m✓ 90[0m       [36;2m✗ 0[0m  
+     http_req_blocked[2m..................:[0m avg=[36m27.56µs[0m min=[36m0s[0m      med=[36m0s[0m       max=[36m1.09ms[0m  p(90)=[36m0s[0m      p(95)=[36m0s[0m      p(99)=[36m888.5µs[0m
+     http_req_connecting[2m...............:[0m avg=[36m26.21µs[0m min=[36m0s[0m      med=[36m0s[0m       max=[36m1.09ms[0m  p(90)=[36m0s[0m      p(95)=[36m0s[0m      p(99)=[36m888.5µs[0m
+   [32m✓[0m http_req_duration[2m.................:[0m avg=[36m26.66ms[0m min=[36m3.1ms[0m   med=[36m25.44ms[0m  max=[36m52.14ms[0m p(90)=[36m41.79ms[0m p(95)=[36m44.36ms[0m p(99)=[36m50.69ms[0m
+     [32m✓[0m { api:deposit,phase:p2 }[2m........:[0m avg=[36m26.41ms[0m min=[36m14.13ms[0m med=[36m26.51ms[0m  max=[36m45.91ms[0m p(90)=[36m34.54ms[0m p(95)=[36m37.65ms[0m p(99)=[36m43.91ms[0m
+     [32m✓[0m { api:deposit,phase:p3 }[2m........:[0m avg=[36m18.85ms[0m min=[36m8.08ms[0m  med=[36m15.14ms[0m  max=[36m43.04ms[0m p(90)=[36m31.51ms[0m p(95)=[36m39.61ms[0m p(99)=[36m42.99ms[0m
+     [32m✓[0m { api:deposit }[2m.................:[0m avg=[36m21.37ms[0m min=[36m8.08ms[0m  med=[36m17.14ms[0m  max=[36m45.91ms[0m p(90)=[36m34.15ms[0m p(95)=[36m39.33ms[0m p(99)=[36m43.35ms[0m
+     [32m✓[0m { api:payment,phase:p1 }[2m........:[0m avg=[36m30.99ms[0m min=[36m17.63ms[0m med=[36m31.65ms[0m  max=[36m48.18ms[0m p(90)=[36m39.75ms[0m p(95)=[36m44.29ms[0m p(99)=[36m47.17ms[0m
+     [32m✓[0m { api:payment,phase:p2 }[2m........:[0m avg=[36m27.14ms[0m min=[36m17.16ms[0m med=[36m25.13ms[0m  max=[36m47.34ms[0m p(90)=[36m38.11ms[0m p(95)=[36m42.52ms[0m p(99)=[36m46.36ms[0m
+     [32m✓[0m { api:payment,phase:p3 }[2m........:[0m avg=[36m19.51ms[0m min=[36m8.12ms[0m  med=[36m18.28ms[0m  max=[36m41.23ms[0m p(90)=[36m21.85ms[0m p(95)=[36m28.37ms[0m p(99)=[36m38.36ms[0m
+     [32m✓[0m { api:payment,phase:p4 }[2m........:[0m avg=[36m34.94ms[0m min=[36m16.88ms[0m med=[36m34.85ms[0m  max=[36m52.14ms[0m p(90)=[36m44.7ms[0m  p(95)=[36m50.14ms[0m p(99)=[36m52.02ms[0m
+     [32m✓[0m { api:payment }[2m.................:[0m avg=[36m30.98ms[0m min=[36m8.12ms[0m  med=[36m31.99ms[0m  max=[36m52.14ms[0m p(90)=[36m43.88ms[0m p(95)=[36m47.97ms[0m p(99)=[36m51.31ms[0m
+     [32m✓[0m { api:sendmoney,phase:p1 }[2m......:[0m avg=[36m30.26ms[0m min=[36m16.32ms[0m med=[36m31.78ms[0m  max=[36m46.13ms[0m p(90)=[36m39.25ms[0m p(95)=[36m42.64ms[0m p(99)=[36m45.45ms[0m
+     [32m✓[0m { api:sendmoney,phase:p2 }[2m......:[0m avg=[36m27.56ms[0m min=[36m18.09ms[0m med=[36m25.18ms[0m  max=[36m47.97ms[0m p(90)=[36m39.32ms[0m p(95)=[36m41.32ms[0m p(99)=[36m46.34ms[0m
+     [32m✓[0m { api:sendmoney,phase:p3 }[2m......:[0m avg=[36m19.14ms[0m min=[36m11.59ms[0m med=[36m17.83ms[0m  max=[36m38.55ms[0m p(90)=[36m23.31ms[0m p(95)=[36m30.59ms[0m p(99)=[36m37.74ms[0m
+     [32m✓[0m { api:sendmoney }[2m...............:[0m avg=[36m25.65ms[0m min=[36m11.59ms[0m med=[36m22.01ms[0m  max=[36m47.97ms[0m p(90)=[36m38.58ms[0m p(95)=[36m40.72ms[0m p(99)=[36m46.33ms[0m
+       { expected_response:true }[2m......:[0m avg=[36m26.66ms[0m min=[36m3.1ms[0m   med=[36m25.44ms[0m  max=[36m52.14ms[0m p(90)=[36m41.79ms[0m p(95)=[36m44.36ms[0m p(99)=[36m50.69ms[0m
+     [32m✓[0m { type:transaction,phase:p1 }[2m...:[0m avg=[36m30.63ms[0m min=[36m16.32ms[0m med=[36m31.72ms[0m  max=[36m48.18ms[0m p(90)=[36m39.5ms[0m  p(95)=[36m43.83ms[0m p(99)=[36m46.97ms[0m
+     [32m✓[0m { type:transaction,phase:p2 }[2m...:[0m avg=[36m27.04ms[0m min=[36m14.13ms[0m med=[36m25.99ms[0m  max=[36m47.97ms[0m p(90)=[36m37.93ms[0m p(95)=[36m41.64ms[0m p(99)=[36m47.41ms[0m
+     [32m✓[0m { type:transaction,phase:p3 }[2m...:[0m avg=[36m19.09ms[0m min=[36m8.08ms[0m  med=[36m17.54ms[0m  max=[36m43.04ms[0m p(90)=[36m29.73ms[0m p(95)=[36m37.06ms[0m p(99)=[36m42.64ms[0m
+     [32m✓[0m { type:transaction,phase:p4 }[2m...:[0m avg=[36m34.94ms[0m min=[36m16.88ms[0m med=[36m34.85ms[0m  max=[36m52.14ms[0m p(90)=[36m44.7ms[0m  p(95)=[36m50.14ms[0m p(99)=[36m52.02ms[0m
+     [32m✓[0m { type:transaction }[2m............:[0m avg=[36m27.5ms[0m  min=[36m8.08ms[0m  med=[36m26.11ms[0m  max=[36m52.14ms[0m p(90)=[36m41.94ms[0m p(95)=[36m44.4ms[0m  p(99)=[36m50.73ms[0m
+   [32m✓[0m http_req_failed[2m...................:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 402[0m
+     [32m✓[0m { api:deposit,phase:p2 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:deposit,phase:p3 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 60[0m 
+     [32m✓[0m { api:deposit }[2m.................:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 90[0m 
+     [32m✓[0m { api:payment,phase:p1 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:payment,phase:p2 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:payment,phase:p3 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:payment,phase:p4 }[2m........:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 116[0m
+     [32m✓[0m { api:payment }[2m.................:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 206[0m
+     [32m✓[0m { api:sendmoney,phase:p1 }[2m......:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:sendmoney,phase:p2 }[2m......:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:sendmoney,phase:p3 }[2m......:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 30[0m 
+     [32m✓[0m { api:sendmoney }[2m...............:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 90[0m 
+     [32m✓[0m { type:transaction,phase:p1 }[2m...:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 60[0m 
+     [32m✓[0m { type:transaction,phase:p2 }[2m...:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 90[0m 
+     [32m✓[0m { type:transaction,phase:p3 }[2m...:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 120[0m
+     [32m✓[0m { type:transaction,phase:p4 }[2m...:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 116[0m
+     [32m✓[0m { type:transaction }[2m............:[0m [36m0.00%[0m   [36;2m✓ 0[0m        [36;2m✗ 386[0m
+     http_req_receiving[2m................:[0m avg=[36m1.97ms[0m  min=[36m0s[0m      med=[36m716.49µs[0m max=[36m12.42ms[0m p(90)=[36m6.39ms[0m  p(95)=[36m8.16ms[0m  p(99)=[36m11.31ms[0m
+     http_req_sending[2m..................:[0m avg=[36m5.23µs[0m  min=[36m0s[0m      med=[36m0s[0m       max=[36m600µs[0m   p(90)=[36m0s[0m      p(95)=[36m0s[0m      p(99)=[36m0s[0m     
+     http_req_tls_handshaking[2m..........:[0m avg=[36m0s[0m      min=[36m0s[0m      med=[36m0s[0m       max=[36m0s[0m      p(90)=[36m0s[0m      p(95)=[36m0s[0m      p(99)=[36m0s[0m     
+     http_req_waiting[2m..................:[0m avg=[36m24.68ms[0m min=[36m527.1µs[0m med=[36m23.81ms[0m  max=[36m52.14ms[0m p(90)=[36m38.83ms[0m p(95)=[36m42.88ms[0m p(99)=[36m50.56ms[0m
+     http_reqs[2m.........................:[0m [36m402[0m     [36;2m3.345839/s[0m
+     [32m✓[0m { api:deposit,phase:p2 }[2m........:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:deposit,phase:p3 }[2m........:[0m [36m60[0m      [36;2m0.499379/s[0m
+     [32m✓[0m { api:payment,phase:p1 }[2m........:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:payment,phase:p2 }[2m........:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:payment,phase:p3 }[2m........:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:payment,phase:p4 }[2m........:[0m [36m116[0m     [36;2m0.965466/s[0m
+     [32m✓[0m { api:sendmoney,phase:p1 }[2m......:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:sendmoney,phase:p2 }[2m......:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { api:sendmoney,phase:p3 }[2m......:[0m [36m30[0m      [36;2m0.249689/s[0m
+     [32m✓[0m { type:transaction,phase:p1 }[2m...:[0m [36m60[0m      [36;2m0.499379/s[0m
+     [32m✓[0m { type:transaction,phase:p2 }[2m...:[0m [36m90[0m      [36;2m0.749068/s[0m
+     [32m✓[0m { type:transaction,phase:p3 }[2m...:[0m [36m120[0m     [36;2m0.998758/s[0m
+     [32m✓[0m { type:transaction,phase:p4 }[2m...:[0m [36m116[0m     [36;2m0.965466/s[0m
+     iteration_duration[2m................:[0m avg=[36m1.02s[0m   min=[36m1.01s[0m   med=[36m1.02s[0m    max=[36m1.05s[0m   p(90)=[36m1.04s[0m   p(95)=[36m1.04s[0m   p(99)=[36m1.05s[0m  
+     iterations[2m........................:[0m [36m386[0m     [36;2m3.212671/s[0m
+     payment_count[2m.....................:[0m [36m206[0m     [36;2m1.714534/s[0m
+   [32m✓[0m payment_duration[2m..................:[0m avg=[36m30.98ms[0m min=[36m8.12ms[0m  med=[36m31.99ms[0m  max=[36m52.14ms[0m p(90)=[36m43.88ms[0m p(95)=[36m47.97ms[0m p(99)=[36m51.31ms[0m
+   [32m✓[0m payment_success[2m...................:[0m [36m100.00%[0m [36;2m✓ 206[0m      [36;2m✗ 0[0m  
+     sendmoney_count[2m...................:[0m [36m90[0m      [36;2m0.749068/s[0m
+   [32m✓[0m sendmoney_duration[2m................:[0m avg=[36m25.65ms[0m min=[36m11.59ms[0m med=[36m22.01ms[0m  max=[36m47.97ms[0m p(90)=[36m38.58ms[0m p(95)=[36m40.72ms[0m p(99)=[36m46.33ms[0m
+   [32m✓[0m sendmoney_success[2m.................:[0m [36m100.00%[0m [36;2m✓ 90[0m       [36;2m✗ 0[0m  
+     vus[2m...............................:[0m [36m4[0m       [36;2mmin=2[0m      [36;2mmax=5[0m
+     vus_max[2m...........................:[0m [36m8[0m       [36;2mmin=8[0m      [36;2mmax=8[0m
+running (2m00.1s), 0/8 VUs, 386 complete and 0 interrupted iterations
+p1_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p1_c2_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_a1_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p2_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p2_c2_send_c1 ✓ [ 100% ] 1 VUs  30s
+p3_a1_dep_c1  ✓ [ 100% ] 1 VUs  30s
+p3_a2_dep_c2  ✓ [ 100% ] 1 VUs  30s
+p3_c1_send_c2 ✓ [ 100% ] 1 VUs  30s
+p3_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_a1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p4_a2_pay_m2  ✓ [ 100% ] 1 VUs  30s
+p4_c1_pay_m1  ✓ [ 100% ] 1 VUs  30s
+p4_c2_pay_m2  ✓ [ 100% ] 1 VUs  30s

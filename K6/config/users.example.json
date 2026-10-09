@@ -1,0 +1,13 @@
+{
+  "baseUrl": "http://localhost:5000",
+  "secretKey": "<PARTNER_KEY>",
+  "otp": "<DEFAULT_OTP>",
+  "users": {
+    "agent1":    { "name": "K6 Agent One",    "role": "Agent",    "phone_number": "01XXXXXXXXX", "password": "<password>" },
+    "agent2":    { "name": "K6 Agent Two",    "role": "Agent",    "phone_number": "01XXXXXXXXX", "password": "<password>" },
+    "customer1": { "name": "K6 Customer One", "role": "Customer", "phone_number": "01XXXXXXXXX", "password": "<password>" },
+    "customer2": { "name": "K6 Customer Two", "role": "Customer", "phone_number": "01XXXXXXXXX", "password": "<password>" },
+    "merchant1": { "name": "K6 Merchant One", "role": "Merchant", "phone_number": "01XXXXXXXXX", "password": "<password>" },
+    "merchant2": { "name": "K6 Merchant Two", "role": "Merchant", "phone_number": "01XXXXXXXXX", "password": "<password>" }
+  }
+}

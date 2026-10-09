@@ -1,0 +1,15 @@
+node_modules/
+.env
+config/users.json
+setup/limits-backup.json
+api.log
+*.log
+
+# copied API: never commit its secrets or deps
+dmoney-transaction-api/.env
+dmoney-transaction-api/.env.*
+dmoney-transaction-api/node_modules/
+dmoney-transaction-api/gmail-service-account.json
+
+# personal notes
+MASTER_PROMPT.md
